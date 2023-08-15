@@ -1,0 +1,74 @@
+
+.offcanvas-navbar {
+  background-color: black;
+}
+.navbar-img {
+  width: 95px;
+  height: 85px;
+}
+
+.nav-title {
+  font-size: 48px;
+  letter-spacing: .2rem;font-weight: 600;
+}
+.navbar-title{
+  text-align: left;
+  position: absolute;
+  left: 120px;
+  top: 30px;
+  letter-spacing: .2rem;
+}
+
+.header{
+  background-color: black;
+}
+
+.sidebar {
+  width: 120px;
+  margin: 5px;
+  position: sticky;
+  top:62px;
+  align-self: flex-start;
+  align-items: start;
+}
+
+.sidebar a:hover {
+  color: hotpink;
+}
+
+.sidebar a:visited {
+  color: blueviolet
+}
+
+.opening-cards {
+  width: 300px; /* Adjust card width */
+  height: 350px; /* Adjust card height */
+  border-radius: 12px;
+  margin: 30px; /* Add margin to create spacing between cards */
+  display: inline-block; /* Display cards inline */
+  vertical-align: top; /* Align cards at the top */
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px; 
+}
+
+.card-img-container {
+  width: 100%;
+  height: 300px; 
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fill the container while maintaining aspect ratio */
+}
+
+.card-text{
+  font-size: 32px;
+  text-align: center;
+}
