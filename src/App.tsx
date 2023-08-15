@@ -10,6 +10,7 @@ import GrammarCard from "./component/GrammarCard";
 import ResourcesCard from "./component/ResourcesCard";
 import TextsCard from "./component/TextsCard";
 import { Stack } from "react-bootstrap";
+import HeroImg from "./component/HeroImg";
 
 function App() {
   return (
@@ -17,11 +18,13 @@ function App() {
     <Container fluid className="container">
       <BrowserRouter>
         <Navbar />
+        <HeroImg />
         <div className="card-container">
           <GrammarCard />
           <TextsCard />
           <ResourcesCard />
         </div>
+        <hr className="horizontal-row"/>
         {/* <Header /> */}
         <Routes>
           <Route path="/" element={<MatrixClassroomPage />} />
