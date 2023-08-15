@@ -9,8 +9,8 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 function OffCanvasNav() {
   return (
     <>
-      {[false].map((expand) => (
-        <Navbar expand={expand} className="bg-body-black mb-3 offcanvas-navbar" sticky='top'>
+      {[false].map((expand, i) => (
+        <Navbar key={i} expand={expand} className="bg-body-black mb-3 offcanvas-navbar" sticky='top'>
           <Container fluid >
           <Navbar.Brand href="/">
             <img
@@ -44,7 +44,7 @@ function OffCanvasNav() {
                   <Button variant="outline-success">Search</Button>
                 </Form>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
+                  <Nav.Link href="/">Home</Nav.Link>
                   <Nav.Link href="#action2">Link</Nav.Link>
                   <NavDropdown
                     title="Dropdown"
