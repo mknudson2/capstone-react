@@ -1,15 +1,13 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Container from "react-bootstrap/Container";
-// import Header from "../src/component/Header";
-import MatrixClassroomPage from "./pages/MatrixClassroomPage";
-import LoginPage from "./pages/LoginPage";
+import LoginRegisterPage from "./pages/LoginRegisterPage";
 import UserPage from "./pages/UserPage";
-import RegisterPage from "./pages/RegisterPage";
+
 import Navbar from "./component/OffCanvasNav";
 import GrammarCard from "./component/GrammarCard";
 import ResourcesCard from "./component/ResourcesCard";
 import TextsCard from "./component/TextsCard";
-import { Stack } from "react-bootstrap";
+
 import HeroImg from "./component/HeroImg";
 
 function App() {
@@ -24,13 +22,11 @@ function App() {
           <TextsCard />
           <ResourcesCard />
         </div>
-        <hr className="horizontal-row"/>
-        {/* <Header /> */}
+        <hr className="horizontal-row" />
+
         <Routes>
-          <Route path="/" element={<MatrixClassroomPage />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/login-register" element={<LoginRegisterPage />} />
           <Route path="/user-page" element={<UserPage />} />
-          <Route path="/register" element={<RegisterPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>

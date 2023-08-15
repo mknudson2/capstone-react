@@ -1,5 +1,13 @@
+import { useNavigate } from "react-router-dom"
+
+
 
 export default function HeroImg() {
+    const Navigate = useNavigate();
+
+    const handleButtonClicked = ()=>{
+        Navigate("/login-register")
+    }
   return (
     <div className="hero-container">
       <div className="hero-blur"></div>
@@ -11,7 +19,7 @@ export default function HeroImg() {
       <div className="hero-content">
         <h1>The Complete Resource and Community for</h1>
         <h1>Old Norse Learning and Research</h1>
-        <button className="hero-button">Login / Sign Up</button>
+        <button className="hero-button" onClick={handleButtonClicked}> Login / Sign Up</button>
       </div>
     </div>
   );

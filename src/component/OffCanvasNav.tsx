@@ -10,7 +10,7 @@ function OffCanvasNav() {
   return (
     <>
       {[false].map((expand) => (
-        <Navbar expand={expand} className="bg-body-black mb-3 offcanvas-navbar">
+        <Navbar expand={expand} className="bg-body-black mb-3 offcanvas-navbar" sticky='top'>
           <Container fluid >
           <Navbar.Brand href="/">
             <img
@@ -20,7 +20,7 @@ function OffCanvasNav() {
               height="65"
               className="d-inline-block align-top"
             />{' '}
-            <span className='nav-title'>Norrœna</span>
+            <span className='nav-title'>NORRŒNA</span>
           </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas

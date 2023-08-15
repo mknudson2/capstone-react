@@ -1,7 +1,7 @@
 
 import Body from '../component/Body'
 
-export default function LoginPage() {
+export default function LoginRegisterPage() {
   return (
     <Body sidebar={false}>
       <h2>Login Form</h2>
