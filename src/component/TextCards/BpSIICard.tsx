@@ -1,13 +1,11 @@
 import { Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-
-export default function OsOCard() {
-
+export default function BpSIICard() {
     const Navigate = useNavigate();
 
     const handleCardClicked = ()=>{
-        Navigate("/olafs-odds-saga")
+        Navigate("/biskupa-saga-II")
     }
 
   return (
@@ -15,11 +13,11 @@ export default function OsOCard() {
       <div className="text-card-img-container">
         <Card.Img
           variant="top"
-          src="/FaerOlaf.png"
+          src="/BpS-II.png"
           className="text-card-img"
         />
       </div>
-      <Card.Title className="text-card-text">Óláfs saga Tryggvasonar</Card.Title>
+      <Card.Title className="text-card-text">Biskupa sögur II</Card.Title>
     </Card>
   );
 }

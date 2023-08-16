@@ -19,7 +19,7 @@ export default function SverrisCard() {
           className="text-card-img"
         />
       </div>
-      <Card.Title className="text-card-text">Sverris Saga</Card.Title>
+      <Card.Title className="text-card-text">Sverris saga</Card.Title>
     </Card>
   );
 }

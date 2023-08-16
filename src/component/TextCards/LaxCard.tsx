@@ -19,7 +19,7 @@ export default function LaxCard() {
           className="text-card-img"
         />
       </div>
-      <Card.Title className="text-card-text">Laxdœla Saga</Card.Title>
+      <Card.Title className="text-card-text">Laxdœla saga</Card.Title>
     </Card>
   );
 }

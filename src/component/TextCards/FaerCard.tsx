@@ -19,7 +19,7 @@ export default function FaerCard() {
           className="text-card-img"
         />
       </div>
-      <Card.Title className="text-card-text">Færeyinga Saga</Card.Title>
+      <Card.Title className="text-card-text">Færeyinga saga</Card.Title>
     </Card>
   );
 }
