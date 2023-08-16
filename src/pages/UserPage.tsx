@@ -1,7 +1,9 @@
-import React from 'react'
+import { useParams } from "react-router-dom"
 
-export default function UserPage() {
+export default function UserPage({ user }:{user:LoggedUser}) {
+
+  const {username} = useParams()
   return (
-    <div>UserPage</div>
+    <h1>{username}'s Page</h1> 
   )
 }

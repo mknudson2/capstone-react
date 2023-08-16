@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { NavLink } from 'react-router-dom';
 
 function OffCanvasNav() {
   return (
@@ -12,7 +13,7 @@ function OffCanvasNav() {
       {[false].map((expand, i) => (
         <Navbar key={i} expand={expand} className="bg-body-black mb-3 offcanvas-navbar" sticky='top'>
           <Container fluid >
-          <Navbar.Brand href="/">
+          <Navbar.Brand as={NavLink} to="/">
             <img
               alt="Viking Ship"
               src="/NorrLogo.png"
@@ -44,18 +45,18 @@ function OffCanvasNav() {
                   <Button variant="outline-success">Search</Button>
                 </Form>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="/">Home</Nav.Link>
-                  <Nav.Link href="#action2">Link</Nav.Link>
+                  <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+                  <Nav.Link as={NavLink} to="/">Link</Nav.Link>
                   <NavDropdown
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
+                    <NavDropdown.Item as={NavLink} to="/">Action</NavDropdown.Item>
+                    <NavDropdown.Item as={NavLink} to="/">
                       Another action
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
+                    <NavDropdown.Item as={NavLink} to="/">
                       Something else here
                     </NavDropdown.Item>
                   </NavDropdown>

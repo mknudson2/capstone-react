@@ -5,6 +5,8 @@ import UserPage from "./pages/UserPage";
 
 import Navbar from "./component/OffCanvasNav";
 import Landing from "./component/Landing";
+import Logout from "./component/Logout";
+import LaxdoelaSagaPage from "./pages/LaxdoelaSagaPage";
 
 function App() {
   return (
@@ -14,8 +16,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/logout" element={<Logout />} />
           <Route path="/login-register" element={<LoginRegisterPage />} />
-          <Route path="/user-page" element={<UserPage />} />
+          <Route path="/user-page" element={<UserPage/>} />
+          <Route path="/laxdoela-ch1" element={<LaxdoelaSagaPage/>} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
