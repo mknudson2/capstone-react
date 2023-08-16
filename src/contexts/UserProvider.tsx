@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction, createContext, useState } from "react";
 
 interface UserContextValues {
   user: ValidUser;
-  setUser: Dispatch<SetStateAction<ValidUser>>; // Adjusted to ValidUser
+  setUser: Dispatch<SetStateAction<ValidUser>>; 
 }
 
 export const UserContext = createContext({} as UserContextValues);

@@ -16,6 +16,7 @@ function OffCanvasNav() {
 
   function handleUserSearch(e: FormEvent<HTMLFormElement>): void {
     e.preventDefault();
+    console.log("Searching....");
     navigate(`/user-page/${usernameField.current!.value}`);
   }
 
@@ -71,7 +72,9 @@ function OffCanvasNav() {
                     aria-label="Search"
                     ref={usernameField}
                   />
-                  <Button variant="outline-success">Search</Button>
+                  <Button variant="outline-success" type="submit">
+                    Search
+                  </Button>
                 </Form>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link as={NavLink} to="/">

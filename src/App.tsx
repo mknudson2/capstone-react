@@ -11,6 +11,7 @@ import GrammaticalCasesPage from "./pages/GrammaticalCasesPage";
 import ResourcesPage from "./pages/ResourcesPage";
 import { useContext, useEffect } from "react";
 import { UserContext } from "./contexts/UserProvider";
+import TextsPage from "./pages/TextsPage";
 
 function App() {
 
@@ -41,8 +42,9 @@ function App() {
           <Route path="/login-register" element={<LoginRegisterPage />} />
           <Route path="/user-page/:username" element={<UserPage />} />
           <Route path="/grammar-case" element={<GrammaticalCasesPage/>} />
-          <Route path="/laxdoela-ch1" element={<LaxdoelaSagaPage/>} />
+          <Route path="/lax-saga" element={<LaxdoelaSagaPage/>} />
           <Route path="/resources" element={<ResourcesPage/>} />
+          <Route path="/texts" element={<TextsPage/>} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>

@@ -6,7 +6,7 @@ export default function TextsCard() {
   const Navigate = useNavigate();
 
   const handleCardClicked = ()=>{
-      Navigate("/laxdoela-ch1")
+      Navigate("/texts")
   }
 
   return (
