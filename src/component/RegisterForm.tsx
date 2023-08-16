@@ -1,4 +1,4 @@
-import { useRef, FormEvent, useState, useEffect, useContext } from "react";
+import { useRef, FormEvent, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../contexts/UserProvider";
 
@@ -19,7 +19,7 @@ export default function RegisterForm() {
 
   async function handleRegisterData(e:FormEvent<HTMLFormElement>){
     e.preventDefault
-    const res = await fetch('', {
+    const res = await fetch('http://127.0.0.1:5000/api/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
