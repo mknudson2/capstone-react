@@ -18,11 +18,12 @@ export default function AuthProvider({
     email: "",
     token: "",
   });
-
+  
   const value = {
     user,
     setUser,
   };
-
+  console.log(user)
+  console.log(value)
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 }

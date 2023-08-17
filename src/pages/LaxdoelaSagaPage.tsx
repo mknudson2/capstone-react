@@ -11,7 +11,7 @@ import LaxInfoKp1 from "../component/LaxdoelaSaga/LaxInfoKp1";
 import LaxTextKp1 from "../component/LaxdoelaSaga/LaxTextKp1";
 
 export default function LaxdoelaSagaPage() {
-  const [selectedLocation, setSelectedLocation] = useState("Kirkjubœr");
+  const [selectedLocation, setSelectedLocation] = useState("NorthAtlantic");
 
   return (
     <section className="saga-layout">
@@ -19,7 +19,7 @@ export default function LaxdoelaSagaPage() {
         <LaxTextKp1 />
       </div>
       <div className="saga-info-container">
-      <div id="map-container">
+      <div className="map-container" id="map-container">
           {selectedLocation === "Kirkjubœr" && <Kirkjubœr />}
           {selectedLocation === "Norðmœrr" && <Norðmœrr />}
           {selectedLocation === "Norway" && <Norway />}

@@ -27,14 +27,14 @@ export default function LoginForm() {
     });
     if (res.ok) {
       const data = await res.json();
-      console.log(data);
+      console.log(data, "LOGIN FORM--DATA");
       setUser({
         user_id: data.user_id,
         first_name: data.first_name,
         last_name: data.last_name,
         username: data.username,
         email: emailField.current!.value,
-        token: data.access_token,
+        token: data.access_token
       });
 
       updateUserState(
@@ -56,7 +56,8 @@ export default function LoginForm() {
     username: string,
     email: string,
     token: string
-  ) {
+    ) {
+    console.log(user.first_name, "LOGIN FORM--USER FIRST NAME")
     setUser({
       user_id: user_id,
       first_name: first_name,
@@ -67,6 +68,10 @@ export default function LoginForm() {
     });
     localStorage.setItem("token", JSON.stringify(token));
     localStorage.setItem("email", JSON.stringify(email));
+    localStorage.setItem("first_name", JSON.stringify(first_name));
+    localStorage.setItem("last_name", JSON.stringify(last_name));
+    localStorage.setItem("username", JSON.stringify(username));
+    localStorage.setItem("user_id", JSON.stringify(user_id));
   }
 
   function resetForm() {

@@ -29,7 +29,7 @@ function App() {
         token: JSON.parse(localStorage.getItem('token')!)
       })
     }
-  },[])
+  },[user, setUser])
 
   return (
     // react fragment <> </> since all items need to be wrapped in/belong to a parent class. This stops the clutter.
@@ -45,6 +45,7 @@ function App() {
           <Route path="/lax-saga" element={<LaxdoelaSagaPage/>} />
           <Route path="/resources" element={<ResourcesPage/>} />
           <Route path="/texts" element={<TextsPage/>} />
+          <Route path="/user-collections/:username" element={<TextsPage/>} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>

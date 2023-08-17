@@ -1,10 +1,15 @@
+import { useState } from "react";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
 
-export default function LaxTextKp1() {
+export default function LaxTextKp1({setSelectedLocation}) {
   const handleWordClick = (word: string) => {
     console.log("Clicked word: ${word}");
   };
+
+  const handleLocationClick = (locationName:string)=>{
+    setSelectedLocation(locationName)
+  }
 
   const popoverContent = (word: string, header: string, body: string) => (
     <Popover id={`popover-${word}`}>
@@ -12,10 +17,6 @@ export default function LaxTextKp1() {
       <Popover.Body>{body}</Popover.Body>
     </Popover>
   );
-
-  const handleLocationClick = (locationName: string) => {
-    setSelectedLocation(locationName);
-  };
 
   return (
     <div className="saga-textbox-format">
@@ -55,7 +56,7 @@ export default function LaxTextKp1() {
             "at heita; pres: heit, heitir, Pret: hét, hétu, 2nd hézt (+acc) "
           )}
         >
-          <span className="verb" id="">
+          <span className="text-verb" id="">
             hét{" "}
           </span>
         </OverlayTrigger>
@@ -100,7 +101,7 @@ export default function LaxTextKp1() {
         <span className="pronoun" id="">
           hann{" "}
         </span>
-        <span className="verb" id="">
+        <span className="text-verb" id="">
           var{" "}
         </span>
         <span className="noun" id="">
@@ -129,7 +130,7 @@ export default function LaxTextKp1() {
         <span className="pronoun" id="">
           Hann{" "}
         </span>
-        <span className="verb" id="">
+        <span className="text-verb" id="">
           bjó{" "}
         </span>
         <span className="preposition" id="">
@@ -156,7 +157,7 @@ export default function LaxTextKp1() {
         <span className="pronoun" id="">
           þat{" "}
         </span>
-        <span className="verb" id="">
+        <span className="text-verb" id="">
           er{" "}
         </span>
         <span className="preposition" id="">
@@ -186,7 +187,7 @@ export default function LaxTextKp1() {
         <span className="byname" id="">
           flatnefr{" "}
         </span>
-        <span className="verb" id="">
+        <span className="text-verb" id="">
           átti{" "}
         </span>
         <span className="noun" id="">
@@ -216,14 +217,14 @@ export default function LaxTextKp1() {
         <span className="noun" id="">
           bǫrn{" "}
         </span>
-        <span className="verb" id="">
+        <span className="text-verb" id="">
           váru{" "}
         </span>
         <span className="numeral" id="">
           fimm
         </span>
         <span>; </span>
-        <span className="verb" id="">
+        <span className="text-verb" id="">
           hét{" "}
         </span>
         <span className="numeral" id="">
@@ -252,7 +253,7 @@ export default function LaxTextKp1() {
         <span className="byname" id="">
           hyrna{" "}
         </span>
-        <span className="verb" id="">
+        <span className="text-verb" id="">
           hét{" "}
         </span>
         <span className="noun" id="">
@@ -265,7 +266,7 @@ export default function LaxTextKp1() {
         <span className="pronoun" id="">
           er{" "}
         </span>
-        <span className="verb" id="">
+        <span className="text-verb" id="">
           átti{" "}
         </span>
         <span className="noun" id="">
@@ -307,7 +308,7 @@ export default function LaxTextKp1() {
         <span className="byname" id="">
           in djúpúðga{" "}
         </span>
-        <span className="verb" id="">
+        <span className="text-verb" id="">
           var{" "}
         </span>
         <span className="conjunction" id="">
@@ -321,7 +322,7 @@ export default function LaxTextKp1() {
         </span>
         <span>, </span>
         <span>er </span>
-        <span className="verb" id="">
+        <span className="text-verb" id="">
           átti{" "}
         </span>
         <span className="noun" id="">
@@ -347,7 +348,7 @@ export default function LaxTextKp1() {
         <span className="noun" id="">
           Svertlingar{" "}
         </span>
-        <span className="verb" id="">
+        <span className="text-verb" id="">
           drápu
         </span>
         <span>. </span>
@@ -357,7 +358,7 @@ export default function LaxTextKp1() {
         <span className="byname" id="">
           manvitsbrekka{" "}
         </span>
-        <span className="verb" id="">
+        <span className="text-verb" id="">
           hét{" "}
         </span>
         <span className="conjunction" id="">
@@ -373,7 +374,7 @@ export default function LaxTextKp1() {
         <span className="pronoun" id="">
           hon{" "}
         </span>
-        <span className="verb" id="">
+        <span className="text-verb" id="">
           var{" "}
         </span>
         <span className="noun" id="">
@@ -389,7 +390,7 @@ export default function LaxTextKp1() {
         <span className="pronoun" id="">
           er{" "}
         </span>
-        <span className="verb" id="">
+        <span className="text-verb" id="">
           nam{" "}
         </span>
         <span className="noun" id="">
@@ -414,7 +415,7 @@ export default function LaxTextKp1() {
         <span className="noun" id="">
           sonr
         </span>
-        <span className="verb" id="">
+        <span className="text-verb" id="">
           var{" "}
         </span>
         <span className="noun" id="">

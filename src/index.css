@@ -182,6 +182,21 @@ h1 {
   margin-left: auto;
   margin-right: auto;
 }
+
+.profile-hr{
+  border-top: 4px solid white;
+  width: 74%;
+  margin-left: auto;
+  margin-right: 320px;
+}
+
+.profile-main-display-hr{
+  border: 2px solid black;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ================================= */
 /* ============> FORMS <============ */
 /* ================================= */
@@ -328,9 +343,15 @@ h1 {
 .map-container {
   width: 100%;
   height: 50%;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   border-radius: 12px;
   margin-bottom: 15px;
+}
+
+.maps{
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  height: 500px;
 }
 
 .info-container {
@@ -340,6 +361,11 @@ h1 {
   grid-column-end: 1;
   border: 2px solid white;
   border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  margin-top: 10px;
+  margin-bottom: 25px;
 }
 /* .saga-info-container {
   display: grid;
@@ -376,28 +402,53 @@ h1 {
   padding:20px 40px;
 }
 
+.noun-key{
+  color: rgb(50, 136, 170);
+  cursor: pointer;
+}
 .noun:hover{
   color: rgb(50, 136, 170);
   cursor: pointer;
 }
 
+.byname-key{
+  color: rgb(61, 181, 221);
+  cursor: pointer;
+}
 .byname:hover{
   color: rgb(61, 181, 221);
   cursor: pointer;
 }
 
+.pronoun-key{
+  color: blueviolet;
+  cursor: pointer;
+}
 .pronoun:hover{
   color: blueviolet;
   cursor: pointer;
 }
 
-.verb:hover{
+.text-verb-key{
+  color: red;
+  cursor: pointer;
+}
+.text-verb:hover{
   color: red;
   cursor: pointer;
 }
 
+.adjective-key{
+  color:  green;
+  cursor: pointer;
+}
 .adjective:hover{
   color:  green;
+  cursor: pointer;
+}
+
+.preposition-key{
+  color: orange;
   cursor: pointer;
 }
 
@@ -406,11 +457,19 @@ h1 {
   cursor: pointer;
 }
 
+.conjunction-key{
+  color: brown;
+  cursor: pointer;
+}
 .conjunction:hover{
   color: brown;
   cursor: pointer;
 }
 
+.numeral-key{
+  color: pink;
+  cursor: pointer;
+}
 .numeral:hover{
   color: pink;
   cursor: pointer;
@@ -419,6 +478,15 @@ h1 {
 
 .maps {
   width: 100%;
+}
+
+.lax-info{
+  width: 13%;
+  height: 90%;
+  background-color: black;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px 10px;
 }
 
 /* =============================== */
@@ -485,7 +553,7 @@ h1 {
 }
 
 .text-card-text{
-  font-size: 2rem;
+  font-size: 1.9rem;
   text-align: center;
   letter-spacing: .23rem;
   margin-top:2.5%;
@@ -638,4 +706,171 @@ h1 {
 
 .grammar-sub-title{
   color: var(--active-blue);
+}
+
+/* =================================== */
+/* ============> PROFILE <============ */
+/* =================================== */
+
+.profile-header-layout {
+  /* display: grid;
+  grid-template-columns: repeat(4 1fr); */
+  /* align-items: baseline; */
+  position: relative;
+}
+
+.profile-header-text{
+  grid-column-start: 1 ;
+  grid-column-end: 4 ;
+  text-align: left;
+  justify-content:start;
+  margin-left: 8%;
+  margin-top: 6%;
+}
+
+.profile-name{
+  font-size: 4rem;
+}
+
+.collab-flag{
+  position: absolute;
+  width: 125px;
+  left: 650px;
+  top:30px;
+}
+
+.profile-specializations{
+  font-size: 1.5rem;
+}
+
+.edit-info{
+  font-size: 1rem;
+  margin-left: 1rem;
+  font-style: italic;
+  color: var(--blue);
+}
+
+.profile-img-container{
+  width: 250px;
+  height: 250px;
+  border: 1px solid white;
+  background-color: grey;
+  border-radius: 50%;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  /* padding-bottom: -10px; */
+  position: absolute;
+  top:-80px;
+  right: 60px;
+}
+
+
+.profile-main-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.profile-main-body {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.profile-post-field{
+  width: 50%;
+  margin-left: 30%;
+  margin-top: 5%;
+  height: 4rem;
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  padding-top: .75rem;
+  border-radius: 12px;
+  position: relative;
+}
+
+.profile-post-button{
+  margin-left: 1.5rem;
+  font-size: 2rem;
+  padding: 0 25px;
+  border-radius: 12px;
+  margin-top: -10px;
+  border: var(--blue);
+  background-color: var(--blue);
+  position: absolute;
+  top: 443px
+  ;
+}
+
+.profile-main-display{
+  width: 90%;
+  height: 100%;
+  margin-left: 11%;
+  margin-top: 5%;
+  background-color: whitesmoke;
+  border-radius: 22px;
+  box-shadow: var(--box-shadow);
+  padding-top: 1rem;
+}
+
+.profile-main-display-header{
+  color: var(--blue);
+  font-size: 4rem;
+  margin-left: 3rem ;
+}
+
+.profile-main-aside{
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.profile-aside-headers{
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.profile-aside-about{
+  width: 300px;
+  height: 250px;
+  border: 2px solid black;
+  border-radius: 22px;
+  background-color: black;
+  margin-bottom: 25px;
+  margin-top: 65px;
+  margin-left: 100px;
+  box-shadow: var(--box-shadow);
+}
+
+.profile-aside-collections{
+  width: 300px;
+  height: 250px;
+  border: 2px solid black;
+  border-radius: 22px;
+  background-color: black;
+  margin-bottom: 25px;
+  margin-left: 100px;
+  box-shadow: var(--box-shadow);
+}
+
+.profile-aside-projects {
+  width: 300px;
+  height: 250px;
+  border: 2px solid black;
+  border-radius: 22px;
+  background-color: black;
+  margin-left: 100px;
+  box-shadow: var(--box-shadow);
+}
+
+.profile-area-edit-fields{
+  margin: 10px;
+  width: 30%;
+}
+
+.edit-profile-collab-check{
+  margin-left: 15px;
+  height: 17px;
+}
+
+.add-icon{
+  width: 30px;
+  margin-left: 0px;
 }

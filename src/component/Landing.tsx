@@ -13,6 +13,8 @@ export default function Landing() {
         <ResourcesCard />
       </div>
       <hr className="horizontal-row" />
+      {/* <CommunityHighlights />  */}
+      {/* <Footer /> */}
     </>
   );
 }
