@@ -398,6 +398,7 @@ export default function LaxTextKp1() {
         <span className="preposition" id="">
           í{" "}
         </span>
+
           <span
             className="noun"
             id=""

@@ -15,7 +15,7 @@ export default function GrammaticalCase() {
           derived from the
         </p>
         <div className="grammar-video-container"></div>
-            <img className="youtube-logo" src="public/Youtube Icon (PNG240p) - Vector69Com.png" alt="YouTube logo" />
+            <img className="youtube-logo" src="/Youtube Icon (PNG240p) - Vector69Com.png" alt="YouTube logo" />
       </section>
 
       <p className="grammar-paragraph">

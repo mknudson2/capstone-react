@@ -77,21 +77,36 @@ export default function LoginForm() {
   return (
     <div className="signin-container">
       <h5>Already have an account?</h5>
-      <h2>Sign In: </h2>
+      <h2 className="signin-header">Sign In: </h2>
       <form onSubmit={handleUserData} className="login-form">
-        <input type="text" ref={emailField} required placeholder="Email" />
+        <input
+          type="text"
+          ref={emailField}
+          required
+          placeholder="Email"
+          className="sign-in-fields"
+        />
         <br />
         <input
           type="password"
           ref={passwordField}
           required
           placeholder="Password"
+          className="sign-in-fields"
         />{" "}
         <br />
         <button type="submit" className="signin-btn">
           Sign In
         </button>
       </form>
+      <p className="signin-description-header">Sign in to:</p>
+      <ul>
+        <li className="signin-description-li">Access the full library of interactive texts</li>
+        <li className="signin-description-li">Access the full Old Norse course</li>
+        <li className="signin-description-li">Find and connect with other Norse scholars and enthusiasts</li>
+        <li className="signin-description-li">Have up-to-date access to journals, conferences, programs, and job annoucements</li>
+        <li className="signin-description-li">Contribute to making the largest, most comprehensive resource and community for Viking and Medieval Nordic studies</li>
+      </ul>
     </div>
   );
 }

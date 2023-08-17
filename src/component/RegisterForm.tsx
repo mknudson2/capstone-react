@@ -55,19 +55,19 @@ export default function RegisterForm() {
   return (
     <div className="register-container">
       <h5>Don't have an account?</h5>
-      <h1>Register: </h1>
+      <h1 className="register-header">Register: </h1>
       <form onSubmit={handleRegisterData} className="register-form">
-        <input type="text" placeholder="First Name" ref={firstNameField}/>
+        <input type="text" placeholder="First Name" ref={firstNameField} className="register-fields"/>
         <br />
-        <input type="text" placeholder="Last Name" ref={lastNameField}/>
+        <input type="text" placeholder="Last Name" ref={lastNameField} className="register-fields"/>
         <br />
-        <input type="text" placeholder="Username" ref={usernameField}/>
+        <input type="text" placeholder="Username" ref={usernameField} className="register-fields"/>
         <br />
-        <input type="text" placeholder="Email" ref={emailField}/>
+        <input type="text" placeholder="Email" ref={emailField} className="register-fields"/>
         <br />
-        <input type="password" placeholder="Password" ref={passwordField}/>
+        <input type="password" placeholder="Password" ref={passwordField} className="register-fields"/>
         <br />
-        <input type="password" placeholder="Verify Password" ref={verifyPasswordField}/>
+        <input type="password" placeholder="Verify Password" ref={verifyPasswordField} className="register-fields"/>
         <br />
         <button className="register-btn" type="submit">
           Register
