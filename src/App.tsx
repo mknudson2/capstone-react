@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useContext, useEffect } from "react";
+import { UserContext } from "./contexts/UserProvider";
 import Container from "react-bootstrap/Container";
-import LoginRegisterPage from "./pages/LoginRegisterPage";
-import UserPage from "./pages/UserPage";
 
+import UserPage from "./pages/UserPage";
 import Navbar from "./component/OffCanvasNav";
 import Landing from "./component/Landing";
 import Logout from "./component/Logout";
+import LoginRegisterPage from "./pages/LoginRegisterPage";
 import LaxdoelaSagaPage from "./pages/LaxdoelaSagaPage";
-import GrammaticalCasesPage from "./pages/GrammaticalCasesPage";
 import ResourcesPage from "./pages/ResourcesPage";
-import { useContext, useEffect } from "react";
-import { UserContext } from "./contexts/UserProvider";
 import TextsPage from "./pages/TextsPage";
+import GrammarPage from "./pages/GrammarPage";
 
 function App() {
 
@@ -41,7 +41,7 @@ function App() {
           <Route path="/logout" element={<Logout />} />
           <Route path="/login-register" element={<LoginRegisterPage />} />
           <Route path="/user-page/:username" element={<UserPage />} />
-          <Route path="/grammar-case" element={<GrammaticalCasesPage/>} />
+          <Route path="/grammar-case" element={<GrammarPage/>} />
           <Route path="/lax-saga" element={<LaxdoelaSagaPage/>} />
           <Route path="/resources" element={<ResourcesPage/>} />
           <Route path="/texts" element={<TextsPage/>} />

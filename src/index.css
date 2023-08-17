@@ -5,6 +5,7 @@
   --active-blue: #0057d8;
   --red: #dc3545;
   --active-red: #b72c3a;
+  --box-shadow: 4px 4px 4px black;
 }
 
 
@@ -250,8 +251,9 @@ h1 {
 .saga-text {
   width: 50%;
   height: 100%;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   border-radius: 12px;
+  /* box-shadow: 4px 4px 4px black; */
 }
 
 .saga-info-container {
@@ -361,6 +363,23 @@ h1 {
 /* ==========> TEXT PAGE <======== */
 /* =============================== */
 
+.text-type-btn-container{
+  display: flex;
+  justify-content: center;
+}
+
+.text-type-btn {
+  margin-top: 10%;
+  background-color: var(--blue);
+  font-size: 2rem;
+  letter-spacing: .2rem;
+}
+
+.text-type-btn:hover {
+
+  background-color: green;
+}
+
 .texts-container{
   display: flex;
   flex-direction: row;
@@ -390,7 +409,8 @@ h1 {
 
 .text-card-img-container {
   width: 100%;
-  height: 310px; 
+  height: 19.375rem; 
+  /* height: 310px;  */
   overflow: hidden;
 }
 
@@ -403,8 +423,155 @@ h1 {
 }
 
 .text-card-text{
-  font-size: 32px;
+  font-size: 2rem;
   text-align: center;
   letter-spacing: .23rem;
   margin-top:2.5%;
+}
+
+/* ================================== */
+/* ==========> Grammar PAGE <======== */
+/* ================================== */
+
+.grammar-page-layout{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grammar-side-nav {
+  grid-column-start: 0;
+  grid-column-end: 1;
+  width: 100%;
+  margin-top: -1rem;
+}
+
+.grammar-accordion{
+  box-shadow: 4px 4px 4px black;
+}
+
+.grammar-accordion-formatting{
+  background-color: black;
+}
+
+.grammar-accordian-header{
+  font-size: 1.5rem;
+  ;
+}
+
+.grammar-accordion-ul{
+  text-decoration: none;
+}
+
+.grammar-accordion-li{
+  font-size: 1.3rem;
+}
+
+.grammar-main-display{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  width:100%;
+  position: relative;
+}
+
+.grammar-header-tag{
+  position: absolute;
+  color:darkgrey;
+  right:110px;
+  top: 40px;
+  font-size: 1.5rem;
+}
+
+.grammar-display-container{
+  width: 90%;
+  height: 100%;
+  background-color: whitesmoke;
+  border-radius: 22px;
+  box-shadow: 4px 4px 16px black;
+  margin: 1rem auto;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 3rem;
+}
+
+.grammar-header{
+  font-size: 3.5rem;
+  color: var(--blue);
+  margin-bottom:2rem;
+  font-weight: 800;
+  position: relative;
+}
+
+.upper-grammar-layout{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grammar-video-container{
+  width: 500px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 12px;
+  background-color: black;
+  margin-left: 50px;
+  /* box-shadow: var(-); */
+}
+
+.youtube-logo{
+  position: absolute;
+  scale: 25%;
+  right: 240px;
+  top: 190px;
+}
+
+.grammar-paragraph {
+  color: rgb(42, 42, 42);
+  font-size: 1.65rem;
+}
+
+.grammar-p-block{
+  text-align: justify;
+  margin-left: 25%;
+}
+
+.subject{
+  color: darkred;
+}
+
+.verb{
+  color: blue;
+}
+
+.direct-object{
+  color: green;
+}
+
+.indirect-object{
+  color: darkorange;
+}
+
+.possessive {
+  color: purple;
+}
+
+.grammar-hr{
+  border-top: 3px solid black;
+}
+
+.grammar-paragraph-li{
+  margin-left: 5%;
+  font-size: 1.65rem;
+}
+
+.grammar-paragraph-ul{
+  margin-left: 5%;
+  font-size: 1.65rem;
+  color: rgb(42, 42, 42);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.grammar-sub-title{
+  color: var(--active-blue);
 }
