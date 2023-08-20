@@ -241,6 +241,17 @@ h1 {
   
 }
 
+.signin-btn:hover{
+  transform: scale(1.05);
+  transition: .2s ease-in-out;
+}
+
+.signin-btn:active{
+  transform: scale(1);
+  transition: .2s ease-in-out;
+  background-color: var(--active-blue);
+}
+
 .sign-in-fields{
   font-size: 1.5rem;
   margin-top: 1.5rem;
@@ -304,13 +315,13 @@ h1 {
 }
 
 .register-btn:hover {
-  transform: scale(1.125);
+  transform: scale(1.1);
   transition: .2s ease-in-out;
 }
 
 .register-btn:active {
   background-color: var(--active-blue);
-  transform: scale(1.15);
+  transform: scale(1);
 }
 
 /* =================================== */
@@ -359,7 +370,7 @@ h1 {
   grid-row-end: 2;
   grid-column-start: 0;
   grid-column-end: 1;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   border-radius: 12px;
   width: 100%;
   height: 100%;
@@ -503,6 +514,7 @@ h1 {
   background-color: var(--blue);
   font-size: 2rem;
   letter-spacing: .2rem;
+  border: none;
 }
 
 .text-type-btn:hover {
@@ -733,10 +745,8 @@ h1 {
 }
 
 .collab-flag{
-  position: absolute;
   width: 125px;
-  left: 650px;
-  top:30px;
+  margin-left: 1.5%;
 }
 
 .profile-specializations{
@@ -792,11 +802,9 @@ h1 {
   font-size: 2rem;
   padding: 0 25px;
   border-radius: 12px;
-  margin-top: -10px;
+  margin-bottom: -10px;
   border: var(--blue);
   background-color: var(--blue);
-  position: absolute;
-  top: 443px
   ;
 }
 
@@ -873,4 +881,149 @@ h1 {
 .add-icon{
   width: 30px;
   margin-left: 0px;
+}
+
+.info-box {
+  display: flex;
+  background-image: url('public/the_settlement_exhbition_025_-rroman_gerasynenko.jpeg');
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--box-shadow);
+}
+
+.tab-content{
+  font-size: 1.2rem;
+  color: white;
+  margin: 15px;
+}
+
+.tabs {
+  background-color: var(--blue);
+  color: white;
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-top: 2%;
+}
+
+.resource-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.journal-img {
+  align-self: start;
+}
+
+.societies-card{
+  object-fit: contain;
+  background-color: whitesmoke;
+  padding: 0 10px;
+}
+
+.text-collection-header{
+  text-align: center;
+  font-weight: 700;
+  margin-top: 3%;
+}
+
+.text-collection-p{
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 3%;
+}
+
+.collection-input-section{
+  width: 50%;
+  height: 100%;
+  background-image: url(/oxford.jpeg);
+  margin-top:-1%;
+  padding-top: 5%;
+  box-shadow: var(--box-shadow);
+  position: sticky;
+  
+  
+}
+
+.collection-blur{
+  backdrop-filter: blur(10px);
+  width: 75%;
+  height: 75%;
+  margin:auto;
+  padding-bottom: 5%;
+
+}
+
+.collection-form{
+  padding-bottom: 43%;
+  
+}
+
+.collection-item-input-field {
+  font-size: 1.5rem;
+  width: 66%;
+  margin-left: 16%;
+  margin-top: 4%;
+  padding-left: 1.5rem;
+}
+
+.add-to-collection-btn {
+  background-color: var(--blue);
+  border-radius: 4px;
+  font-size: 18px;
+  letter-spacing: .05rem;
+  padding: 5px 20px;
+  width: 406px;
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
+  margin-left: 16%;
+  /* box-shadow: 2px 2px 4px black; */
+  border:var(--blue);
+}
+
+.add-to-collection-btn:hover{
+  transform: scale(1.05);
+  transition: .2s;
+}
+
+.add-to-collection-btn:active {
+  transform: scale(1);
+  background-color: var(--active-blue);
+}
+
+.collection-item-input-header{
+  text-align: center;
+  padding-top: 8%;
+}
+
+.display-collection-full{
+ margin-left: 5%;
+width: 50%;
+}
+
+.collection-block {
+  display: flex;
+}
+
+.resource-header-h{
+  text-align: center;
+}
+.resource-header-p{
+text-align: center;
+margin-bottom: 2%;
+margin-left:10% ;
+margin-right: 10%;
+}
+
+.landing-community-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.landing-community-img-container {
+  width: 40%;
+  height: 40%;
+
 }

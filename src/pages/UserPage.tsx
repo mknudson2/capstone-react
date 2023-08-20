@@ -49,8 +49,8 @@ export default function UserPage() {
     <>
       <div className="profile-header-layout">
         <div className="profile-header-text">
-          <h1 className="profile-name">{fullName}</h1>
-          <img src="/Open to Collaboration.png" alt="Open to Collaborate flag" className="collab-flag" />
+          <h1 className="profile-name">{fullName}
+          <img src="/Open to Collaboration.png" alt="Open to Collaborate flag" className="collab-flag" /></h1>
           <h5 className="profile-specializations">
             Specializations | Areas of Interest{" "}
             <a href="" className="edit-info" onClick={handleEditClick}>

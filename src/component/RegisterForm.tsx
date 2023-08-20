@@ -37,7 +37,7 @@ export default function RegisterForm() {
       const data = await res.json()
       setUser({
         email: emailField.current!.value,
-        token: ''
+        token: data.token
       })
       resetForm()
     } else window.alert("Register Failed")

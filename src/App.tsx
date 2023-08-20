@@ -12,6 +12,7 @@ import LaxdoelaSagaPage from "./pages/LaxdoelaSagaPage";
 import ResourcesPage from "./pages/ResourcesPage";
 import TextsPage from "./pages/TextsPage";
 import GrammarPage from "./pages/GrammarPage";
+import UserCollections from "./pages/UserCollections";
 
 function App() {
 
@@ -45,7 +46,7 @@ function App() {
           <Route path="/lax-saga" element={<LaxdoelaSagaPage/>} />
           <Route path="/resources" element={<ResourcesPage/>} />
           <Route path="/texts" element={<TextsPage/>} />
-          <Route path="/user-collections/:username" element={<TextsPage/>} />
+          <Route path="/user-collections/:username" element={<UserCollections/>} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>

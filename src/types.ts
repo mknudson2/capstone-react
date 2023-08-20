@@ -7,3 +7,11 @@ interface ValidUser {
     email: string,
     token: string
   }
+
+  interface Collectible {
+    book_title: string,
+    author: string,
+    language: string,
+    type: string,
+    description: string
+  }

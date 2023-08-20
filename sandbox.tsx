@@ -25,19 +25,22 @@ export default function LoginForm() {
         password: passwordField.current!.value,
       }),
     });
+    // ===========================
     if (res.ok) {
-      console.log(res.status, "Res Status")
       const data = await res.json();
-      console.log(data, "LOGIN FORM--DATA");
+
+      const token = data.access_token;
+      localStorage.setItem("token", JSON.stringify(token));
+      const res = await fetch ("http://127.0.0.1:5000/api/")
+
       setUser({
-        user_id: data.user_id,
-        first_name: data.first_name,
-        last_name: data.last_name,
-        username: data.username,
+        user_id: data.user.user_id,
+        first_name: data.user.first_name,
+        last_name: data.user.last_name,
+        username: data.user.username,
         email: emailField.current!.value,
-        token: data.access_token
+        token: data.access_token,
       });
-      console.log(user, "Checking Set User")
 
       updateUserState(
         data.user_id,
@@ -58,8 +61,8 @@ export default function LoginForm() {
     username: string,
     email: string,
     token: string
-    ) {
-    console.log(user.first_name, "LOGIN FORM--USER FIRST NAME")
+  ) {
+    console.log(user.first_name, "LOGIN FORM--USER FIRST NAME");
     setUser({
       user_id: user_id,
       first_name: first_name,
@@ -108,11 +111,23 @@ export default function LoginForm() {
       </form>
       <p className="signin-description-header">Sign in to:</p>
       <ul>
-        <li className="signin-description-li">Access the full library of interactive texts</li>
-        <li className="signin-description-li">Access the full Old Norse course</li>
-        <li className="signin-description-li">Find and connect with other Norse scholars and enthusiasts</li>
-        <li className="signin-description-li">Have up-to-date access to journals, conferences, programs, and job annoucements</li>
-        <li className="signin-description-li">Contribute to making the largest, most comprehensive resource and community for Viking and Medieval Nordic studies</li>
+        <li className="signin-description-li">
+          Access the full library of interactive texts
+        </li>
+        <li className="signin-description-li">
+          Access the full Old Norse course
+        </li>
+        <li className="signin-description-li">
+          Find and connect with other Norse scholars and enthusiasts
+        </li>
+        <li className="signin-description-li">
+          Have up-to-date access to journals, conferences, programs, and job
+          annoucements
+        </li>
+        <li className="signin-description-li">
+          Contribute to making the largest, most comprehensive resource and
+          community for Viking and Medieval Nordic studies
+        </li>
       </ul>
     </div>
   );

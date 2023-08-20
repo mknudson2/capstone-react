@@ -43,6 +43,9 @@ export default function TextsPage() {
 
   return (
     <>
+    <h5 className="text-collection-header">Readily accessible to both veteran and Newcomers alike, these digital editions of the Old Norse literary corpus will be an invaluable resource.</h5>
+    <p className="text-collection-p">Each text comes in three forms: Normalized Old Norse, Dual-facing Old Norse/Modern Enlgish, and Modern English translation. Regardless of the edition you choose to use, you will have access to maps of each named location, genealogical trees to organize the hoard of names presented, and articles tailored to those themes specific to the particular work. In addition, the Old Norse editions come complete with full grammatical information for each word and phrase, allowing you to hone your language skills or assist when you get stuck. </p>
+    <hr className="horizontal-row"/>
       <div className="text-type-btn-container">
         <TextTypeButton 
             selectedTextType={selectedTextType}

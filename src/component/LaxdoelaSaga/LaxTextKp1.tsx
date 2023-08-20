@@ -1,15 +1,15 @@
-import { useState } from "react";
+import React from "react";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
 
-export default function LaxTextKp1({setSelectedLocation}) {
-  const handleWordClick = (word: string) => {
-    console.log("Clicked word: ${word}");
-  };
+interface TextContainerProps {
+  setSelectedImage: (imgUrl: string) => void;
+}
 
-  const handleLocationClick = (locationName:string)=>{
-    setSelectedLocation(locationName)
-  }
+const LaxTextKp1: React.FC<TextContainerProps> = ({ setSelectedImage }) => {
+  const handleLocationClick = (imgUrl: string) => {
+    setSelectedImage(imgUrl);
+  };
 
   const popoverContent = (word: string, header: string, body: string) => (
     <Popover id={`popover-${word}`}>
@@ -116,7 +116,7 @@ export default function LaxTextKp1({setSelectedLocation}) {
         <span
           className="noun"
           id=""
-          onClick={() => handleLocationClick("Norway")}
+          onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Norway.tsx")}
         >
           Nóregi{" "}
         </span>
@@ -139,7 +139,7 @@ export default function LaxTextKp1({setSelectedLocation}) {
         <span
           className="noun"
           id=""
-          onClick={() => handleLocationClick("Raumsdal")}
+          onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Raumsdal.tsx")}
         >
           Raumsdal{" "}
         </span>
@@ -149,7 +149,7 @@ export default function LaxTextKp1({setSelectedLocation}) {
         <span
           className="noun"
           id=""
-          onClick={() => handleLocationClick("Raumsdal")}
+          onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Raumsdal.tsx")}
         >
           Raumsdœlafylki
         </span>
@@ -166,7 +166,7 @@ export default function LaxTextKp1({setSelectedLocation}) {
         <span
           className="noun"
           id=""
-          onClick={() => handleLocationClick("Sunnmœrr")}
+          onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Sunnmœrr.tsx")}
         >
           Sunnmœrar{" "}
         </span>
@@ -176,7 +176,7 @@ export default function LaxTextKp1({setSelectedLocation}) {
         <span
           className="noun"
           id=""
-          onClick={() => handleLocationClick("Norðmœrr")}
+          onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Norðmœrr.tsx")}
         >
           Norðmœrar
         </span>
@@ -400,13 +400,13 @@ export default function LaxTextKp1({setSelectedLocation}) {
           í{" "}
         </span>
 
-          <span
-            className="noun"
-            id=""
-            onClick={() => handleLocationClick("Kirkjubœr")}
-          >
-            Kirkjubœ
-          </span>
+        <span
+          className="noun"
+          id=""
+          onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Kirkjubœr.tsx")}
+        >
+          Kirkjubœ
+        </span>
         <span>; </span>
         <span className="pronoun" id="">
           {" "}
@@ -449,7 +449,6 @@ export default function LaxTextKp1({setSelectedLocation}) {
       </p>
     </div>
   );
-}
-function setSelectedLocation(locationName: any) {
-  throw new Error("Function not implemented.");
-}
+};
+
+export default LaxTextKp1;
