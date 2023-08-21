@@ -10,7 +10,7 @@ export default function UserPage() {
   const { username } = useParams();
   const { user } = useContext(UserContext);
 
-  const handleEditClick = (e) => {
+  const handleEditClick = (e:React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     setShowModal(true);
   };

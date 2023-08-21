@@ -13,6 +13,7 @@ export default function AddToCollection() {
 
   const navigate = useNavigate();
   const { user, setUser } = useContext(UserContext);
+  console.log(setUser)
 
   useEffect(() => {
     if (user.email) navigate("/user-collections/:username");
@@ -39,6 +40,7 @@ export default function AddToCollection() {
 
       console.log(res.status)
       const data = await res.json();
+      console.log(data)
       resetForm();
     } else window.alert("Collection item failed to register");
 

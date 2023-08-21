@@ -10,9 +10,13 @@ import Sunnmœrr from "../component/LaxdoelaSaga/LaxMaps/Sunnmœrr";
 import LaxInfoKp1 from "../component/LaxdoelaSaga/LaxInfoKp1";
 import LaxTextKp1 from "../component/LaxdoelaSaga/LaxTextKp1";
 
+
 export default function LaxdoelaSagaPage() {
   const [selectedLocation, setSelectedLocation] = useState("NorthAtlantic");
+  console.log(setSelectedLocation)
+  
 
+  
   return (
     <section className="saga-layout">
       <div className="saga-text">

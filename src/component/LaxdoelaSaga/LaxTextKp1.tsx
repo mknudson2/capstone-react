@@ -1,15 +1,16 @@
-import React from "react";
+
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
 
-interface TextContainerProps {
-  setSelectedImage: (imgUrl: string) => void;
-}
+// interface TextContainerProps {
+//   setSelectedImage: (imgUrl: string) => void;
+// }
 
-const LaxTextKp1: React.FC<TextContainerProps> = ({ setSelectedImage }) => {
-  const handleLocationClick = (imgUrl: string) => {
-    setSelectedImage(imgUrl);
-  };
+// const LaxTextKp1: React.FC<TextContainerProps> = ({ setSelectedImage }) => {
+//   const handleLocationClick = (imgUrl: string) => {
+//     setSelectedImage(imgUrl);
+//   };
+export default function LaxTextKp1(){
 
   const popoverContent = (word: string, header: string, body: string) => (
     <Popover id={`popover-${word}`}>
@@ -116,7 +117,7 @@ const LaxTextKp1: React.FC<TextContainerProps> = ({ setSelectedImage }) => {
         <span
           className="noun"
           id=""
-          onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Norway.tsx")}
+          // onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Norway.tsx")}
         >
           Nóregi{" "}
         </span>
@@ -139,7 +140,7 @@ const LaxTextKp1: React.FC<TextContainerProps> = ({ setSelectedImage }) => {
         <span
           className="noun"
           id=""
-          onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Raumsdal.tsx")}
+          // onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Raumsdal.tsx")}
         >
           Raumsdal{" "}
         </span>
@@ -149,7 +150,7 @@ const LaxTextKp1: React.FC<TextContainerProps> = ({ setSelectedImage }) => {
         <span
           className="noun"
           id=""
-          onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Raumsdal.tsx")}
+          // onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Raumsdal.tsx")}
         >
           Raumsdœlafylki
         </span>
@@ -166,7 +167,7 @@ const LaxTextKp1: React.FC<TextContainerProps> = ({ setSelectedImage }) => {
         <span
           className="noun"
           id=""
-          onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Sunnmœrr.tsx")}
+          // onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Sunnmœrr.tsx")}
         >
           Sunnmœrar{" "}
         </span>
@@ -176,7 +177,7 @@ const LaxTextKp1: React.FC<TextContainerProps> = ({ setSelectedImage }) => {
         <span
           className="noun"
           id=""
-          onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Norðmœrr.tsx")}
+          // onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Norðmœrr.tsx")}
         >
           Norðmœrar
         </span>
@@ -403,7 +404,7 @@ const LaxTextKp1: React.FC<TextContainerProps> = ({ setSelectedImage }) => {
         <span
           className="noun"
           id=""
-          onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Kirkjubœr.tsx")}
+          // onClick={() => handleLocationClick("src/component/LaxdoelaSaga/LaxMaps/Kirkjubœr.tsx")}
         >
           Kirkjubœ
         </span>
@@ -451,4 +452,3 @@ const LaxTextKp1: React.FC<TextContainerProps> = ({ setSelectedImage }) => {
   );
 };
 
-export default LaxTextKp1;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import TextTypeButton from "../component/TextCards/TextTypeButton";
 import BpSICard from "../component/TextCards/BpSICard";
 import BpSIICard from "../component/TextCards/BpSIICard";
@@ -13,7 +13,7 @@ import VoluspaCard from "../component/TextCards/VoluspaCard";
 export default function TextsPage() {
   const [selectedTextType, setSelectedTextType] = useState("Prose");
 
-  const handleTextTypeClick = (textType) => {
+  const handleTextTypeClick = (textType: string) => {
     setSelectedTextType(textType);
   };
 

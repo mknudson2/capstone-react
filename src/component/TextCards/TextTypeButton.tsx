@@ -3,8 +3,16 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 
-function TextTypeButton({ selectedTextType, onTextTypeClick }) {
-  const handleButtonClick = (textType) => {
+interface TextTypeButtonProps {
+  selectedTextType: string;
+  onTextTypeClick: (textType: string) => void;
+}
+
+const TextTypeButton: React.FC<TextTypeButtonProps> = ({
+  selectedTextType,
+  onTextTypeClick,
+}) => {
+  const handleButtonClick = (textType: string) => {
     onTextTypeClick(textType);
   };
 
@@ -30,6 +38,6 @@ function TextTypeButton({ selectedTextType, onTextTypeClick }) {
       </Button>
     </ButtonGroup>
   );
-}
+};
 
 export default TextTypeButton;

@@ -3,7 +3,7 @@ export default function Post({post}:{post:Postable}) {
   return (
     <p>
         {post.body}<br/>
-        {post.timestamp.toLocalString()}
+        {post.timestamp.toLocaleString()}
     </p>
   );
 }

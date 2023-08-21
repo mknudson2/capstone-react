@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
@@ -14,6 +14,11 @@ export default function ProfileModalContent({
   const [specializations, setSpecializations] = useState("");
   const [profilePicture, setProfilePicture] = useState("");
   const [collaborationToggle, setCollaborationToggle] = useState(false);
+
+  console.log(setSpecializations)
+  console.log(setProfilePicture)
+  console.log(setCollaborationToggle)
+
 
   const handleSave = () => {
     const newData = {

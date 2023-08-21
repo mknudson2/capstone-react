@@ -15,3 +15,10 @@ interface ValidUser {
     type: string,
     description: string
   }
+
+  interface Postable {
+    body: string
+    timestamp: string | Date
+  }
+
+  
